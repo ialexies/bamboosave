@@ -38,7 +38,7 @@ class AppPages {
                     .then((value) => print("User Details"))
                     .catchError((error) => print("Failed to add user: $error"));
 
-                Navigator.pushReplacementNamed(context, '/cryptos');
+                Navigator.pushReplacementNamed(context, AppPages.INITIAL);
               }),
             ],
           );

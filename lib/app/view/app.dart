@@ -6,7 +6,7 @@
 // https://opensource.org/licenses/MIT.
 
 import 'package:bamboosave/app/routes/app_pages.dart';
-import 'package:bamboosave/counter/counter.dart';
+
 import 'package:bamboosave/l10n/l10n.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -18,8 +18,9 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      initialRoute:
-          FirebaseAuth.instance.currentUser == null ? Routes.HOME : Routes.HOME,
+      initialRoute: FirebaseAuth.instance.currentUser == null
+          ? Routes.signin
+          : Routes.HOME,
       getPages: AppPages.routes,
       theme: ThemeData(
         appBarTheme: const AppBarTheme(color: Color(0xFF13B9FF)),
@@ -29,7 +30,6 @@ class App extends StatelessWidget {
       ),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      home: const CounterPage(),
     );
   }
 }
