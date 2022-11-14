@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutterfire_ui/auth.dart';
 import 'package:get/get.dart';
@@ -19,6 +20,24 @@ class AppPages {
       name: _Paths.HOME,
       page: () => HomeView(),
       binding: HomeBinding(),
+    ),
+    GetPage(
+      name: _Paths.profile,
+      page: () => ProfileScreen(
+        providerConfigs: providerConfigs,
+        children: [Text('fdf')],
+        appBar: AppBar(
+          leading: IconButton(
+            onPressed: () => Get.toNamed(Routes.HOME),
+            icon: Icon(Icons.chevron_left),
+          ),
+        ),
+        actions: [
+          SignedOutAction((context) {
+            Navigator.pushReplacementNamed(context, '/signin');
+          }),
+        ],
+      ),
     ),
     GetPage(
         name: _Paths.signin,

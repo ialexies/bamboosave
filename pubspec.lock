@@ -232,34 +232,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.2.3+21"
-  firebase_ui_auth:
-    dependency: transitive
-    description:
-      name: firebase_ui_auth
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.0.5"
-  firebase_ui_localizations:
-    dependency: transitive
-    description:
-      name: firebase_ui_localizations
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.0.1"
-  firebase_ui_oauth:
-    dependency: transitive
-    description:
-      name: firebase_ui_oauth
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.0.5"
-  firebase_ui_oauth_google:
-    dependency: "direct main"
-    description:
-      name: firebase_ui_oauth_google
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.0.5"
   flutter:
     dependency: "direct main"
     description: flutter
