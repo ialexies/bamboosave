@@ -1,3 +1,4 @@
+import 'package:bamboosave/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -12,6 +13,8 @@ class HomeView extends GetView<HomeController> {
         title: Text('HomeView'),
         centerTitle: true,
       ),
+      floatingActionButton:
+          FloatingActionButton(onPressed: () => Get.toNamed(Routes.profile)),
       body: Center(
         child: Text(
           'HomeView is working',
